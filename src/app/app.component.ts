@@ -1,7 +1,11 @@
 import { Component, HostBinding } from '@angular/core';
 import { AuthService, ScreenService, AppInfoService } from './shared/services';
 
-import { locale } from "devextreme/localization";
+//import it to change locale and load localization messages
+import { locale, loadMessages } from "devextreme/localization";
+
+//Load localized messages (English included by default)
+import nlmessages from 'devextreme/localization/messages/nl.json';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +18,7 @@ export class AppComponent  {
   }
 
   constructor(private authService: AuthService, private screen: ScreenService, public appInfo: AppInfoService) { 
+    loadMessages(nlmessages);
     locale("nl-NL");
   }
 
