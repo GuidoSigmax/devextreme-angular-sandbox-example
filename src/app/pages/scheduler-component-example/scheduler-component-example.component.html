@@ -1,0 +1,12 @@
+<dx-scheduler currentView="week"
+              [views]='["week"]'
+              [dataSource]="dataSource"
+              [currentDate]="currentDate"
+              [startDayHour]="9">
+      <dxo-editing #editingOptions
+                   [allowAdding]="true"
+                   [allowDeleting]="true"
+                   [allowUpdating]="true"
+                   [allowResizing]="false"
+                   [allowDragging]="false"></dxo-editing>
+</dx-scheduler>
