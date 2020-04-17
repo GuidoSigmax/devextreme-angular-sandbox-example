@@ -1,4 +1,7 @@
 <dx-scheduler currentView="week"
+              startDateExpr="startDate"
+              endDateExpr="endDate"
+              (onAppointmentFormOpening)="onAppointmentFormOpening($event)"
               [views]='["week"]'
               [dataSource]="dataSource"
               [currentDate]="currentDate"

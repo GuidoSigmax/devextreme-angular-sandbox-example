@@ -6,6 +6,7 @@ import { locale, loadMessages } from "devextreme/localization";
 
 //Load localized messages (English included by default)
 import nlmessages from 'devextreme/localization/messages/nl.json';
+import demessages from 'devextreme/localization/messages/de.json';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +20,7 @@ export class AppComponent  {
 
   constructor(private authService: AuthService, private screen: ScreenService, public appInfo: AppInfoService) { 
     loadMessages(nlmessages);
+    loadMessages(demessages);
     locale("nl-NL");
   }
 
