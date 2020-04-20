@@ -121,7 +121,7 @@ export class SchedulerComponentExampleComponent implements OnInit {
     console.log("validation called");
     return new Promise((resolve,reject)=>{
       setTimeout(() =>{
-        reject();
+        resolve();
       },3000);
     });
   }
